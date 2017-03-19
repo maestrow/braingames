@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "braingames",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "fable",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fable-core": "^0.7.29",
+    "jquery": "^3.2.0",
+    "string_decoder": "^0.10.31",
+    "virtual-dom": "^2.1.1"
+  },
+  "devDependencies": {
+    "fable-arch": "^0.10.1"
+  }
+}

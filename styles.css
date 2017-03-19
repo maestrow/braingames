@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto 10px auto; /* center align */
+    border: 2px solid black;
+    width: 675px;
+    padding: 15px;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    font-size: 3em
+}
+
+.progress {
+    min-height: 20px;
+}
+
+.result-num {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}

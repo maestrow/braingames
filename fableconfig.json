@@ -1,0 +1,10 @@
+{
+    "projFile": [
+        "./games/sequence.fsx",
+        ],
+    //"outDir": "./out",
+    "sourceMaps": true,
+    "rollup": {
+        "dest": "./out/bundle.js"
+    }
+}

@@ -17,7 +17,7 @@ module JQuery =
         abstract css: string -> string -> JQuery
 
     [<Emit("jQuery($0)")>]
-    let Of (selector: obj) : JQuery = failwith "JS only"
+    let jquery (selector: obj) : JQuery = failwith "JS only"
     
     let appendTo target (selector: JQuery) = selector.appendTo target
     let remove (selector: JQuery) = selector.remove ()
@@ -52,15 +52,15 @@ module View =
 
     let mutable gamestate = 1
 
-    let container = Of ".game-field"
-    let progress = Of ".progress"
+    let container = jquery ".game-field"
+    let progress = jquery ".progress"
 
     let createResultNum num = 
         sprintf "<div class=\"result-num\">%d</div>" num
-        |> Of
+        |> jquery
 
     let clickHandler e = 
-        let target = Of e?target
+        let target = jquery e?target
         let num = target |> text |> int
         if gamestate = num then
             num |> createResultNum |> appendTo progress |> ignore
@@ -70,7 +70,7 @@ module View =
 
     let createBlock num = 
         sprintf "<div class=\"block\">%d<div>" num
-        |> Of
+        |> jquery
         |> on "click" clickHandler
 
     let start () = 
